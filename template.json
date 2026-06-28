@@ -31,7 +31,7 @@
       },
       "notes": ""
     },
-    "character": {
+    "npc": {
   "templates": ["base"],
   "experience": { "value": 0 },
   "tribe": "",
