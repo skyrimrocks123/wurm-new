@@ -11,16 +11,44 @@
       }
     },
     "character": {
-      "templates": ["base"],
-      "totem": "",
-      "experience": {
-        "value": 0
+  "templates": ["base"],
+  "experience": { "value": 0 },
+  "tribe": "",
+  "clan": "",
+  "status": "",
+  "prestige": 0,
+  "bravery": 0,
+  "generosity": 0,
+  "wisdom": 0,
+  "stamina": { "value": 10, "max": 10 },
+  "foodSupplies": 0,
+  "people": "",
+  "age": "",
+  "sex": "",
+  "seriousInjuries": "",
+  "notes": ""
+}
       },
       "notes": ""
     },
-    "npc": {
-      "templates": ["base"],
-      "notes": ""
+    "character": {
+  "templates": ["base"],
+  "experience": { "value": 0 },
+  "tribe": "",
+  "clan": "",
+  "status": "",
+  "prestige": 0,
+  "bravery": 0,
+  "generosity": 0,
+  "wisdom": 0,
+  "stamina": { "value": 10, "max": 10 },
+  "foodSupplies": 0,
+  "people": "",
+  "age": "",
+  "sex": "",
+  "seriousInjuries": "",
+  "notes": ""
+}
     }
   },
   "Item": {
