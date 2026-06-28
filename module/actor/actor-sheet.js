@@ -9,9 +9,10 @@ export class WurmActorSheet extends ActorSheet {
     });
   }
 
-  getData() {
+ getData() {
     const context = super.getData();
-    context.systemData = context.data.system;
+    // V11+ syntax uses context.actor.system
+    context.systemData = context.actor.system;
     
     // Categorize items
     context.strengths = [];
@@ -20,6 +21,19 @@ export class WurmActorSheet extends ActorSheet {
     context.secretArts = [];
     context.weapons = [];
     context.gear = [];
+
+    // V11+ syntax needs to iterate over context.actor.items
+    for (let i of context.actor.items) {
+      if (i.type === 'strength') context.strengths.push(i);
+      else if (i.type === 'weakness') context.weaknesses.push(i);
+      else if (i.type === 'talent') context.talents.push(i);
+      else if (i.type === 'secretArt') context.secretArts.push(i);
+      else if (i.type === 'weapon') context.weapons.push(i);
+      else if (i.type === 'gear') context.gear.push(i);
+    }
+
+    return context;
+  }
 
     for (let i of context.items) {
       if (i.type === 'strength') context.strengths.push(i);
