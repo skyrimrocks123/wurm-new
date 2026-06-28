@@ -11,7 +11,8 @@ export class WurmItemSheet extends ItemSheet {
 
   getData() {
     const context = super.getData();
-    context.systemData = context.data.system;
+    // V11+ syntax uses context.item.system
+    context.systemData = context.item.system;
     return context;
   }
 }
